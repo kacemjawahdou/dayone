@@ -1,0 +1,66 @@
+<form #formulaire='ngForm'>
+  <div *ngIf="name.invalid && name.dirty" class="alert alert-danger">
+    Veuillez saisir un nom valide
+  </div>
+  <div class="col-md-4 col-sm-3">
+    <label for="name">Name</label>
+    <input id="name"
+           type="text"
+           class="form-control"
+           name="name"
+           ngModel
+           #name ='ngModel'
+           required
+    >
+    <label for="firstname">FirstName</label>
+    <input id="firstname"
+           type="text"
+           class="form-control"
+           name="firstname"
+           ngModel
+           #firstname ='ngModel'
+           required
+    >
+    <label for="cin">CIN</label>
+    <input id="cin"
+           type="number"
+           class="form-control"
+           name="cin"
+           ngModel
+           #cin ='ngModel'
+           required
+    >
+    <label for="job">JOB</label>
+    <input id="job"
+           type="text"
+           class="form-control"
+           name="job"
+           ngModel
+           #job ='ngModel'
+           required
+    >
+    <label for="path">Path</label>
+    <input id="path"
+           type="text"
+           class="form-control"
+           name="path"
+           ngModel
+           #path ='ngModel'
+
+    >
+    <label for="age">Age</label>
+    <input id="age"
+           type="number"
+           class="form-control"
+           name="age"
+           ngModel
+           #age ='ngModel'
+           required
+    >
+  </div>
+</form>
+<br>
+<div class="col-md-4 col-sm-3">
+
+  <button [disabled]="formulaire.invalid" (click)="createperson(formulaire)" class="btn btn-primary">addPerson</button>
+</div>

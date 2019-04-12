@@ -1,0 +1,14 @@
+
+<ol class="list-group">
+  <!--<div
+    *ngIf="!personnes.length"
+    class="alert alert-danger">
+    Aucune personne dans la base des CVs
+  </div>-->
+  <app-item
+    *ngFor="let personne of personnes"
+    (selectedpers)="treatSonData($event)"
+    [personne]="personne"
+  >
+  </app-item>
+</ol>

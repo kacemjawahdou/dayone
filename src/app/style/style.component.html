@@ -1,0 +1,31 @@
+
+
+<input type="color"  class="form-control" [(ngModel)]="color">
+<input type="number"  class="form-control" [(ngModel)]="size">
+
+<select type="text"  class="form-control" [(ngModel)]="font">
+  <option>comic</option>
+  <option>garamond</option>
+  <option>new time roman</option>
+</select>
+
+
+<p [ngStyle] = "{'color' : color , 'font-family' : font , 'font-size' : size + 'px'} ">
+
+
+
+
+  Bonjour tout le monde ! je teste :
+  la couleur la font size et la font family
+</p>
+
+
+<input appRainbow>
+
+<br>
+
+<button (click)="showing()"> show</button>
+<button (click)="notshowing()"> notshow</button>
+
+
+<p *ngIf="show"> je suis visible !!!!!!!!!!!!</p>
